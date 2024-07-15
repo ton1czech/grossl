@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 export default function Page() {
   return (
-    <main className='p-8 md:p-16 h-screen max-h-screen overflow-hidden flex flex-col justify-between'>
+    <main className='p-8 md:p-16 h-[90vh] max-h-[90vh] md:h-screen md:max-h-screen overflow-hidden flex flex-col justify-between'>
       <div className='flex flex-col md:gap-20 md:flex-row md:justify-between md:text-lg'>
         <div className='order-2 md:order-1'>
           <h1 className='text-lg md:text-2xl font-semibold my-10 md:mt-0 md:mb-6'>
