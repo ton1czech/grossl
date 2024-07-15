@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 export default function Page() {
   return (
-    <main className='p-8 md:p-16 h-screen max-h-screen overflow-hidden'>
+    <main className='p-8 md:p-16'>
       <div className='grid lg:grid-cols-[1fr_1.7fr] gap-10'>
         <img src='/about.jpeg' alt='portrait' />
 
