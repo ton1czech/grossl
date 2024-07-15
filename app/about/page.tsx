@@ -2,9 +2,9 @@ import Link from 'next/link'
 
 export default function Page() {
   return (
-    <main className='p-8 md:p-16 max-h-screen bg-zinc-950 overflow-hidden'>
-      <div className='grid lg:grid-cols-[1fr_1.7fr] gap-10 bg-zinc-950 overflow-hidden'>
-        <img src='/about.jpeg' alt='portrait' className='overflow-hidden' />
+    <main className='p-8 md:p-16 h-screen max-h-screen overflow-hidden'>
+      <div className='grid lg:grid-cols-[1fr_1.7fr] gap-10'>
+        <img src='/about.jpeg' alt='portrait' />
 
         <div className='flex flex-col justify-between'>
           <div className='text-xl text-justify'>
