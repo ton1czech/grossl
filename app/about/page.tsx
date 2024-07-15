@@ -7,7 +7,7 @@ export default function Page() {
         <img src='/about.jpeg' alt='portrait' />
 
         <div className='flex flex-col gap-8 justify-between'>
-          <div className='text-xl text-justify'>
+          <div className='text-lg md:text-xl text-justify'>
             <p className='mb-8'>
               Dominik is a highly motivated and business-minded digital marketer
               and professional content creator specializing in social media. He
