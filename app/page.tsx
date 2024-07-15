@@ -20,10 +20,16 @@ export default function Page() {
 
         <div className='order-1 md:order-2 flex flex-col text-zinc-300 md:text-right'>
           <Link href='/about'>About</Link>
-          <Link href='https://www.instagram.com/dominik_grossl/'>
+          <Link
+            href='https://www.instagram.com/dominik_grossl/'
+            target='_blank'
+          >
             Instagram
           </Link>
-          <Link href='https://www.linkedin.com/search/results/all/?fetchDeterministicClustersOnly=true&heroEntityKey=urn:li:fsd_profile:ACoAADRJzjMBBRG3KMTYxuBXvyVNId6aFenJhNg&keywords=dominik%20gr%C3%B6ssl&origin=RICH_QUERY_SUGGESTION&position=1&searchId=0d495397-767d-47b2-9c4d-e3d33ceb3852&sid=wai&spellCorrectionEnabled=false'>
+          <Link
+            href='https://www.linkedin.com/search/results/all/?fetchDeterministicClustersOnly=true&heroEntityKey=urn:li:fsd_profile:ACoAADRJzjMBBRG3KMTYxuBXvyVNId6aFenJhNg&keywords=dominik%20gr%C3%B6ssl&origin=RICH_QUERY_SUGGESTION&position=1&searchId=0d495397-767d-47b2-9c4d-e3d33ceb3852&sid=wai&spellCorrectionEnabled=false'
+            target='_blank'
+          >
             LinkedIn
           </Link>
         </div>
