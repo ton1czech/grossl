@@ -6,7 +6,7 @@ export default function Page() {
       <div className='grid lg:grid-cols-[1fr_1.7fr] gap-10'>
         <img src='/about.jpeg' alt='portrait' />
 
-        <div className='flex flex-col justify-between'>
+        <div className='flex flex-col gap-8 justify-between'>
           <div className='text-xl text-justify'>
             <p className='mb-8'>
               Dominik is a highly motivated and business-minded digital marketer
