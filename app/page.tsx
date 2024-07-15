@@ -14,7 +14,7 @@ export default function Page() {
             <Link href='mailto:contact@dominikgrossl.com'>
               contact@dominikgrossl.com
             </Link>
-            <Link href='tel:+420739830034'>739 830 034</Link>
+            <Link href='tel:+420739830034'>+420 739 830 034</Link>
           </div>
         </div>
 
