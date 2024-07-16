@@ -3,11 +3,11 @@ import Link from 'next/link'
 export default function Page() {
   return (
     <main className='p-8 md:p-16'>
-      <div className='grid lg:grid-cols-[1fr_1.7fr] gap-10'>
+      <div className='grid lg:grid-cols-[1fr_1.9fr] gap-10'>
         <img src='/about.jpeg' alt='portrait' />
 
-        <div className='flex flex-col gap-8 justify-between'>
-          <div className='text-lg md:text-xl text-justify'>
+        <div className='flex flex-col gap-8 justify-between md:text-xl lg:text-2xl xl:text-3xl text-justify'>
+          <div>
             <p className='mb-8'>
               Dominik is a highly motivated and business-minded digital marketer
               and professional content creator specializing in social media. He
