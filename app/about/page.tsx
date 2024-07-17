@@ -1,13 +1,55 @@
+'use client'
+
+import { ArrowLeft } from 'lucide-react'
 import Link from 'next/link'
+import { useState } from 'react'
+import { cn } from '@/lib/utils'
 
 export default function Page() {
+  const [isHovered, setIsHovered] = useState<boolean>(false)
+  const [text, setText] = useState<string>('')
+
   return (
     <main className='p-8 md:p-16'>
       <div className='grid lg:grid-cols-[1fr_1.9fr] gap-10'>
-        <img src='/about.jpeg' alt='portrait' />
+        <div className='flex flex-col gap-2'>
+          <div className='w-min'>
+            <Link
+              href='/'
+              onMouseEnter={e => {
+                setIsHovered(true)
+                setText(e.currentTarget.innerText)
+              }}
+              onMouseLeave={() => {
+                setIsHovered(false)
+                setText('')
+              }}
+              className={cn(
+                'flex items-center gap-2 text-zinc-300 text-sm transition duration-300',
+                isHovered && text !== 'Home' ? 'opacity-50' : 'opacity-100'
+              )}
+            >
+              <ArrowLeft size={16} />
+              Home
+            </Link>
+          </div>
+          <img
+            src='/about.jpeg'
+            alt='portrait'
+            className={cn(
+              'origin-top transition duration-300',
+              isHovered ? 'opacity-50' : 'opacity-100'
+            )}
+          />
+        </div>
 
-        <div className='flex flex-col gap-8 justify-between md:text-xl lg:text-2xl xl:text-3xl text-justify'>
-          <div>
+        <div className='flex flex-col gap-8 justify-between lg:text-lg 2xl:text-xl text-justify'>
+          <div
+            className={cn(
+              'transition duration-300',
+              isHovered ? 'opacity-50' : 'opacity-100'
+            )}
+          >
             <p className='mb-8'>
               Dominik is a highly motivated and business-minded digital marketer
               and professional content creator specializing in social media. He
@@ -24,12 +66,53 @@ export default function Page() {
               for detail, making every piece of content stand out.
             </p>
           </div>
-          <div className='flex flex-col'>
-            <Link href='mailto:contact@dominikgrossl.com'>
+          <div className='flex flex-col text-zinc-300'>
+            <Link
+              href='mailto:contact@dominikgrossl.com'
+              onMouseEnter={e => {
+                setIsHovered(true)
+                setText(e.currentTarget.innerText)
+              }}
+              onMouseLeave={() => {
+                setIsHovered(false)
+                setText('')
+              }}
+              className={cn(
+                'transition duration-300',
+                isHovered && text !== 'contact@dominikgrossl.com'
+                  ? 'opacity-50'
+                  : 'opacity-100'
+              )}
+            >
               contact@dominikgrossl.com
             </Link>
-            <Link href='tel:+420739830034'>+420 739 830 034</Link>
-            <p>ICO: 14184397 | 345 06, Němčice</p>
+            <Link
+              href='tel:+420739830034'
+              onMouseEnter={e => {
+                setIsHovered(true)
+                setText(e.currentTarget.innerText)
+              }}
+              onMouseLeave={() => {
+                setIsHovered(false)
+                setText('')
+              }}
+              className={cn(
+                'transition duration-300',
+                isHovered && text !== '+420 739 830 034'
+                  ? 'opacity-50'
+                  : 'opacity-100'
+              )}
+            >
+              +420 739 830 034
+            </Link>
+            <p
+              className={cn(
+                'transition duration-300',
+                isHovered ? 'opacity-50' : 'opacity-100'
+              )}
+            >
+              ICO: 14184397 | 345 06, Němčice
+            </p>
           </div>
         </div>
       </div>
