@@ -23,44 +23,48 @@ export default function Page() {
             specializing in social media and marketing.
           </h1>
           <div className='flex flex-col text-zinc-300'>
-            <Link
-              href='mailto:contact@dominikgrossl.com'
-              onMouseEnter={e => {
-                setIsHovered(true)
-                setText(e.currentTarget.innerText)
-              }}
-              onMouseLeave={() => {
-                setIsHovered(false)
-                setText('')
-              }}
-              className={cn(
-                'transition duration-300',
-                isHovered && text !== 'contact@dominikgrossl.com'
-                  ? 'opacity-50'
-                  : 'opacity-100'
-              )}
-            >
-              contact@dominikgrossl.com
-            </Link>
-            <Link
-              href='tel:+420739830034'
-              onMouseEnter={e => {
-                setIsHovered(true)
-                setText(e.currentTarget.innerText)
-              }}
-              onMouseLeave={() => {
-                setIsHovered(false)
-                setText('')
-              }}
-              className={cn(
-                'transition duration-300',
-                isHovered && text !== '+420 739 830 034'
-                  ? 'opacity-50'
-                  : 'opacity-100'
-              )}
-            >
-              +420 739 830 034
-            </Link>
+            <div className='w-min'>
+              <Link
+                href='mailto:contact@dominikgrossl.com'
+                onMouseEnter={e => {
+                  setIsHovered(true)
+                  setText(e.currentTarget.innerText)
+                }}
+                onMouseLeave={() => {
+                  setIsHovered(false)
+                  setText('')
+                }}
+                className={cn(
+                  'transition duration-300',
+                  isHovered && text !== 'contact@dominikgrossl.com'
+                    ? 'opacity-50'
+                    : 'opacity-100'
+                )}
+              >
+                contact@dominikgrossl.com
+              </Link>
+            </div>
+            <div className='w-min'>
+              <Link
+                href='tel:+420739830034'
+                onMouseEnter={e => {
+                  setIsHovered(true)
+                  setText(e.currentTarget.innerText)
+                }}
+                onMouseLeave={() => {
+                  setIsHovered(false)
+                  setText('')
+                }}
+                className={cn(
+                  'transition duration-300 whitespace-nowrap',
+                  isHovered && text !== '+420 739 830 034'
+                    ? 'opacity-50'
+                    : 'opacity-100'
+                )}
+              >
+                +420 739 830 034
+              </Link>
+            </div>
           </div>
         </div>
 
