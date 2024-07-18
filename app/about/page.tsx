@@ -17,7 +17,7 @@ export default function Page() {
   }, [])
 
   return (
-    <main className='p-8 md:p-16'>
+    <main className='p-8 md:p-16 h-[90vh] max-h-[90vh] md:h-screen md:max-h-screen overflow-hidden'>
       <div className='grid lg:grid-cols-[1fr_1.9fr] gap-10'>
         <div className='flex flex-col gap-2'>
           <motion.div
