@@ -50,7 +50,7 @@ export default function Page() {
           </motion.div>
 
           <motion.img
-            src='/about.jpeg'
+            src='/about.webp'
             alt='portrait'
             initial={{ opacity: 0, scale: 0.1 }}
             animate={{ opacity: isHovered ? '50%' : '100%', scale: 1 }}

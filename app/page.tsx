@@ -181,8 +181,8 @@ export default function Page() {
 
       <div>
         <motion.img
-          src='/hero.png'
-          alt='grössl'
+          src='/hero.webp'
+          alt='grossl'
           // initial={{ opacity: 0, scale: 0.1 }}
           animate={{ opacity: isHovered ? '50%' : '100%', scale: 1 }}
           transition={{
