@@ -20,11 +20,12 @@ export default function Page() {
       <div className='flex flex-col md:gap-20 md:flex-row md:justify-between md:text-lg'>
         <div className='order-2 md:order-1'>
           <motion.h1
-            initial={{ opacity: 0, y: 10 }}
+            // initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: isHovered ? '50%' : '100%', y: 0 }}
             transition={{
-              delay: isInitialRender ? 2.5 : 0,
-              duration: isInitialRender ? 0.7 : 0.35,
+              // delay: isInitialRender ? 2.5 : 0,
+              // duration: isInitialRender ? 0.7 : 0.35,
+              duration: .35
             }}
             className='text-lg md:text-2xl font-semibold my-10 md:mt-0 md:mb-6'
           >
@@ -34,7 +35,7 @@ export default function Page() {
           </motion.h1>
           <div className='flex flex-col text-zinc-300'>
             <motion.div
-              initial={{ opacity: 0, x: -10 }}
+              // initial={{ opacity: 0, x: -10 }}
               animate={{
                 opacity:
                   isHovered && text !== 'contact@dominikgrossl.com'
@@ -43,8 +44,9 @@ export default function Page() {
                 x: 0,
               }}
               transition={{
-                delay: isInitialRender ? 3 : 0,
-                duration: isInitialRender ? 0.7 : 0.35,
+                // delay: isInitialRender ? 3 : 0,
+                // duration: isInitialRender ? 0.7 : 0.35,
+                duration: .35
               }}
               className='w-min'
             >
@@ -63,15 +65,16 @@ export default function Page() {
               </Link>
             </motion.div>
             <motion.div
-              initial={{ opacity: 0, x: -10 }}
+              // initial={{ opacity: 0, x: -10 }}
               animate={{
                 opacity:
                   isHovered && text !== '+420 739 830 034' ? '50%' : '100%',
                 x: 0,
               }}
               transition={{
-                delay: isInitialRender ? 3.2 : 0,
-                duration: isInitialRender ? 0.7 : 0.35,
+                // delay: isInitialRender ? 3.2 : 0,
+                // duration: isInitialRender ? 0.7 : 0.35,
+                duration: .35
               }}
               className='w-min'
             >
@@ -95,14 +98,15 @@ export default function Page() {
 
         <div className='order-1 md:order-2 flex flex-col md:text-right text-zinc-300'>
           <motion.div
-            initial={{ opacity: 0, x: 10 }}
+            // initial={{ opacity: 0, x: 10 }}
             animate={{
               opacity: isHovered && text !== 'About' ? '50%' : '100%',
               x: 0,
             }}
             transition={{
-              delay: isInitialRender ? 3 : 0,
-              duration: isInitialRender ? 0.7 : 0.35,
+              // delay: isInitialRender ? 3 : 0,
+              // duration: isInitialRender ? 0.7 : 0.35,
+              duration: .35
             }}
           >
             <Link
@@ -120,7 +124,7 @@ export default function Page() {
             </Link>
           </motion.div>
           <motion.div
-            initial={{ opacity: 0, x: 10 }}
+            // initial={{ opacity: 0, x: 10 }}
             animate={{
               opacity: isHovered && text !== 'Instagram' ? '50%' : '100%',
               x: 0,
@@ -146,14 +150,15 @@ export default function Page() {
             </Link>
           </motion.div>
           <motion.div
-            initial={{ opacity: 0, x: 10 }}
+            // initial={{ opacity: 0, x: 10 }}
             animate={{
               opacity: isHovered && text !== 'LinkedIn' ? '50%' : '100%',
               x: 0,
             }}
             transition={{
-              delay: isInitialRender ? 3.4 : 0,
-              duration: isInitialRender ? 0.7 : 0.35,
+              // delay: isInitialRender ? 3.4 : 0,
+              // duration: isInitialRender ? 0.7 : 0.35,
+              duration: .35
             }}
           >
             <Link
@@ -178,27 +183,28 @@ export default function Page() {
         <motion.img
           src='/hero.png'
           alt='grössl'
-          initial={{ opacity: 0, scale: 0.1 }}
+          // initial={{ opacity: 0, scale: 0.1 }}
           animate={{ opacity: isHovered ? '50%' : '100%', scale: 1 }}
           transition={{
-            delay: isInitialRender ? 0.5 : 0,
-            duration: isInitialRender ? 2 : 0.35,
+            // delay: isInitialRender ? 0.5 : 0,
+            // duration: isInitialRender ? 2 : 0.35,
+            duration: .35
           }}
           className='origin-top'
         />
 
         <footer>
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
+            // initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: isHovered ? '50%' : '100%', y: 0 }}
             transition={{
-              delay: isInitialRender ? 4 : 0,
-              duration: isInitialRender ? 0.7 : 0.35,
+              // delay: isInitialRender ? 4 : 0,
+              // duration: isInitialRender ? 0.7 : 0.35,
+              duration: .35
             }}
-            className='pt-5 md:pt-10 text-[8px] md:text-[10px] text-center text-zinc-500'
+            className='pt-5 md:pt-10 text-[8px] md:text-xs text-center text-zinc-500'
           >
-            &copy; {new Date().getFullYear()} Dominik Grössl | ICO: 14184397 |
-            345 06, Němčice 26
+            &copy; {new Date().getFullYear()} Dominik Grössl | 345 06, Němčice 26, Česká republika | IČO: 14184397
           </motion.p>
         </footer>
       </div>
