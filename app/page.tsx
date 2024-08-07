@@ -16,8 +16,8 @@ export default function Page() {
   }, [])
 
   return (
-    <main className='p-8 md:p-16 h-[90vh] max-h-[90vh] md:h-screen md:max-h-screen overflow-hidden flex flex-col justify-between'>
-      <div className='flex flex-col md:gap-20 md:flex-row md:justify-between md:text-lg'>
+    <main className='flex h-[90vh] max-h-[90vh] flex-col justify-between overflow-hidden p-8 md:h-screen md:max-h-screen md:p-16'>
+      <div className='flex flex-col md:flex-row md:justify-between md:gap-20 md:text-lg'>
         <div className='order-2 md:order-1'>
           <motion.h1
             // initial={{ opacity: 0, y: 10 }}
@@ -25,9 +25,9 @@ export default function Page() {
             transition={{
               // delay: isInitialRender ? 2.5 : 0,
               // duration: isInitialRender ? 0.7 : 0.35,
-              duration: .35
+              duration: 0.35,
             }}
-            className='text-lg md:text-2xl font-semibold my-10 md:mt-0 md:mb-6'
+            className='my-10 text-lg font-semibold md:mb-6 md:mt-0 md:text-2xl'
           >
             Dominik is a business minded professional lifestyle content creator,{' '}
             <br className='hidden md:block' />
@@ -46,13 +46,13 @@ export default function Page() {
               transition={{
                 // delay: isInitialRender ? 3 : 0,
                 // duration: isInitialRender ? 0.7 : 0.35,
-                duration: .35
+                duration: 0.35,
               }}
               className='w-min'
             >
               <Link
                 href='mailto:contact@dominikgrossl.com'
-                onMouseEnter={e => {
+                onMouseEnter={(e) => {
                   setIsHovered(true)
                   setText(e.currentTarget.innerText)
                 }}
@@ -74,13 +74,13 @@ export default function Page() {
               transition={{
                 // delay: isInitialRender ? 3.2 : 0,
                 // duration: isInitialRender ? 0.7 : 0.35,
-                duration: .35
+                duration: 0.35,
               }}
               className='w-min'
             >
               <Link
                 href='tel:+420739830034'
-                onMouseEnter={e => {
+                onMouseEnter={(e) => {
                   setIsHovered(true)
                   setText(e.currentTarget.innerText)
                 }}
@@ -96,7 +96,7 @@ export default function Page() {
           </div>
         </div>
 
-        <div className='order-1 md:order-2 flex flex-col md:text-right text-zinc-300'>
+        <div className='order-1 flex flex-col text-zinc-300 md:order-2 md:text-right'>
           <motion.div
             // initial={{ opacity: 0, x: 10 }}
             animate={{
@@ -106,12 +106,12 @@ export default function Page() {
             transition={{
               // delay: isInitialRender ? 3 : 0,
               // duration: isInitialRender ? 0.7 : 0.35,
-              duration: .35
+              duration: 0.35,
             }}
           >
             <Link
               href='/about'
-              onMouseEnter={e => {
+              onMouseEnter={(e) => {
                 setIsHovered(true)
                 setText(e.currentTarget.innerText)
               }}
@@ -137,7 +137,7 @@ export default function Page() {
             <Link
               href='https://www.instagram.com/dominik_grossl/'
               target='_blank'
-              onMouseEnter={e => {
+              onMouseEnter={(e) => {
                 setIsHovered(true)
                 setText(e.currentTarget.innerText)
               }}
@@ -158,13 +158,13 @@ export default function Page() {
             transition={{
               // delay: isInitialRender ? 3.4 : 0,
               // duration: isInitialRender ? 0.7 : 0.35,
-              duration: .35
+              duration: 0.35,
             }}
           >
             <Link
               href='https://www.linkedin.com/search/results/all/?fetchDeterministicClustersOnly=true&heroEntityKey=urn:li:fsd_profile:ACoAADRJzjMBBRG3KMTYxuBXvyVNId6aFenJhNg&keywords=dominik%20gr%C3%B6ssl&origin=RICH_QUERY_SUGGESTION&position=1&searchId=0d495397-767d-47b2-9c4d-e3d33ceb3852&sid=wai&spellCorrectionEnabled=false'
               target='_blank'
-              onMouseEnter={e => {
+              onMouseEnter={(e) => {
                 setIsHovered(true)
                 setText(e.currentTarget.innerText)
               }}
@@ -188,7 +188,7 @@ export default function Page() {
           transition={{
             // delay: isInitialRender ? 0.5 : 0,
             // duration: isInitialRender ? 2 : 0.35,
-            duration: .35
+            duration: 0.35,
           }}
           className='origin-top'
         />
@@ -200,11 +200,12 @@ export default function Page() {
             transition={{
               // delay: isInitialRender ? 4 : 0,
               // duration: isInitialRender ? 0.7 : 0.35,
-              duration: .35
+              duration: 0.35,
             }}
-            className='pt-5 md:pt-10 text-[8px] md:text-xs text-center text-zinc-500'
+            className='pt-5 text-center text-[8px] text-zinc-500 md:pt-10 md:text-xs'
           >
-            &copy; {new Date().getFullYear()} Dominik Grössl | 345 06, Němčice 26, Česká republika | IČO: 14184397
+            &copy; {new Date().getFullYear()} Dominik Grössl | 345 06, Němčice
+            26, Česká republika | IČO: 14184397
           </motion.p>
         </footer>
       </div>
