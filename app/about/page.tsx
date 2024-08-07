@@ -17,24 +17,25 @@ export default function Page() {
   }, [])
 
   return (
-    <main className='p-8 md:p-16 h-[90vh] max-h-[90vh] md:h-screen md:max-h-screen overflow-hidden'>
-      <div className='grid lg:grid-cols-[1fr_1.9fr] gap-10'>
+    <main className='flex flex-col justify-between p-8 md:h-screen md:max-h-screen md:min-h-screen md:overflow-hidden md:p-16'>
+      <div className='grid gap-10 lg:grid-cols-[1fr_2.5fr] 2xl:grid-cols-[1fr_2.1fr]'>
         <div className='flex flex-col gap-2'>
           <motion.div
-            initial={{ opacity: 0, y: 10 }}
+            // initial={{ opacity: 0, y: 10 }}
             animate={{
               opacity: isHovered && text !== 'Home' ? '50%' : '100%',
               y: 0,
             }}
             transition={{
-              delay: isInitialRender ? 2 : 0,
-              duration: isInitialRender ? 0.7 : 0.35,
+              // delay: isInitialRender ? 2 : 0,
+              // duration: isInitialRender ? 0.7 : 0.35,
+              duration: 0.35,
             }}
             className='w-min'
           >
             <Link
               href='/'
-              onMouseEnter={e => {
+              onMouseEnter={(e) => {
                 setIsHovered(true)
                 setText(e.currentTarget.innerText)
               }}
@@ -42,7 +43,7 @@ export default function Page() {
                 setIsHovered(false)
                 setText('')
               }}
-              className='flex items-center gap-2 text-zinc-300 text-sm'
+              className='flex items-center gap-2 text-sm text-zinc-300'
             >
               <ArrowLeft size={16} />
               Home
@@ -52,23 +53,25 @@ export default function Page() {
           <motion.img
             src='/about.webp'
             alt='portrait'
-            initial={{ opacity: 0, scale: 0.1 }}
+            // initial={{ opacity: 0, scale: 0.1 }}
             animate={{ opacity: isHovered ? '50%' : '100%', scale: 1 }}
             transition={{
-              delay: isInitialRender ? 0.3 : 0,
-              duration: isInitialRender ? 1.5 : 0.35,
+              // delay: isInitialRender ? 0.3 : 0,
+              // duration: isInitialRender ? 1.5 : 0.35,
+              duration: 0.35,
             }}
           />
         </div>
 
-        <div className='flex flex-col gap-8 justify-between lg:text-lg 2xl:text-xl text-justify'>
+        <div className='flex flex-col justify-between gap-8 text-justify lg:text-lg 2xl:text-xl'>
           <div>
             <motion.p
-              initial={{ opacity: 0, y: 10 }}
+              // initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: isHovered ? '50%' : '100%', y: 0 }}
               transition={{
-                delay: isInitialRender ? 2.5 : 0,
-                duration: isInitialRender ? 0.7 : 0.35,
+                // delay: isInitialRender ? 2.5 : 0,
+                // duration: isInitialRender ? 0.7 : 0.35,
+                duration: 0.35,
               }}
               className='mb-8'
             >
@@ -80,11 +83,12 @@ export default function Page() {
               precision and dedication.
             </motion.p>
             <motion.p
-              initial={{ opacity: 0, y: 10 }}
+              // initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: isHovered ? '50%' : '100%', y: 0 }}
               transition={{
-                delay: isInitialRender ? 2.7 : 0,
-                duration: isInitialRender ? 0.7 : 0.35,
+                // delay: isInitialRender ? 2.7 : 0,
+                // duration: isInitialRender ? 0.7 : 0.35,
+                duration: 0.35,
               }}
             >
               His passion for travel and photography has brought him to capture
@@ -95,9 +99,9 @@ export default function Page() {
             </motion.p>
           </div>
 
-          <div className='flex flex-col text-zinc-300'>
+          <div className='flex flex-col text-base text-zinc-300'>
             <motion.div
-              initial={{ opacity: 0, x: -10 }}
+              // initial={{ opacity: 0, x: -10 }}
               animate={{
                 opacity:
                   isHovered && text !== 'contact@dominikgrossl.com'
@@ -106,14 +110,15 @@ export default function Page() {
                 x: 0,
               }}
               transition={{
-                delay: isInitialRender ? 3 : 0,
-                duration: isInitialRender ? 0.7 : 0.35,
+                // delay: isInitialRender ? 3 : 0,
+                // duration: isInitialRender ? 0.7 : 0.35,
+                duration: 0.35,
               }}
               className='w-min'
             >
               <Link
                 href='mailto:contact@dominikgrossl.com'
-                onMouseEnter={e => {
+                onMouseEnter={(e) => {
                   setIsHovered(true)
                   setText(e.currentTarget.innerText)
                 }}
@@ -126,21 +131,22 @@ export default function Page() {
               </Link>
             </motion.div>
             <motion.div
-              initial={{ opacity: 0, x: -10 }}
+              // initial={{ opacity: 0, x: -10 }}
               animate={{
                 opacity:
                   isHovered && text !== '+420 739 830 034' ? '50%' : '100%',
                 x: 0,
               }}
               transition={{
-                delay: isInitialRender ? 3.2 : 0,
-                duration: isInitialRender ? 0.7 : 0.35,
+                // delay: isInitialRender ? 3.2 : 0,
+                // duration: isInitialRender ? 0.7 : 0.35,
+                duration: 0.35,
               }}
               className='w-min'
             >
               <Link
                 href='tel:+420739830034'
-                onMouseEnter={e => {
+                onMouseEnter={(e) => {
                   setIsHovered(true)
                   setText(e.currentTarget.innerText)
                 }}
@@ -154,22 +160,38 @@ export default function Page() {
               </Link>
             </motion.div>
             <motion.p
-              initial={{ opacity: 0, x: -10 }}
+              // initial={{ opacity: 0, x: -10 }}
               animate={{
                 opacity: isHovered ? '50%' : '100%',
-
                 x: 0,
               }}
               transition={{
-                delay: isInitialRender ? 3.4 : 0,
-                duration: isInitialRender ? 0.7 : 0.35,
+                // delay: isInitialRender ? 3.4 : 0,
+                // duration: isInitialRender ? 0.7 : 0.35,
+                duration: 0.35,
               }}
             >
-              ICO: 14184397 | 345 06, Němčice
+              IČO: 14184397 | 345 06, Němčice
             </motion.p>
           </div>
         </div>
       </div>
+
+      <footer>
+        <motion.p
+          // initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: isHovered ? '50%' : '100%', y: 0 }}
+          transition={{
+            // delay: isInitialRender ? 4 : 0,
+            // duration: isInitialRender ? 0.7 : 0.35,
+            duration: 0.35,
+          }}
+          className='pt-5 text-center text-[8px] text-zinc-500 md:pt-10 md:text-xs'
+        >
+          &copy; {new Date().getFullYear()} Dominik Grössl | 345 06, Němčice 26,
+          Česká republika | IČO: 14184397
+        </motion.p>
+      </footer>
     </main>
   )
 }
