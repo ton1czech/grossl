@@ -159,20 +159,6 @@ export default function Page() {
                 +420 739 830 034
               </Link>
             </motion.div>
-            <motion.p
-              // initial={{ opacity: 0, x: -10 }}
-              animate={{
-                opacity: isHovered ? '50%' : '100%',
-                x: 0,
-              }}
-              transition={{
-                // delay: isInitialRender ? 3.4 : 0,
-                // duration: isInitialRender ? 0.7 : 0.35,
-                duration: 0.35,
-              }}
-            >
-              IČO: 14184397 | 345 06, Němčice
-            </motion.p>
           </div>
         </div>
       </div>
