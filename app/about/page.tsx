@@ -104,7 +104,7 @@ export default function Page() {
               // initial={{ opacity: 0, x: -10 }}
               animate={{
                 opacity:
-                  isHovered && text !== 'contact@dominikgrossl.com'
+                  isHovered && text !== 'dominikgrossl77@gmail.com'
                     ? '50%'
                     : '100%',
                 x: 0,
@@ -117,7 +117,7 @@ export default function Page() {
               className='w-min'
             >
               <Link
-                href='mailto:contact@dominikgrossl.com'
+                href='mailto:dominikgrossl77@gmail.com'
                 onMouseEnter={(e) => {
                   setIsHovered(true)
                   setText(e.currentTarget.innerText)
@@ -127,7 +127,7 @@ export default function Page() {
                   setText('')
                 }}
               >
-                contact@dominikgrossl.com
+                dominikgrossl77@gmail.com
               </Link>
             </motion.div>
             <motion.div
