@@ -16,7 +16,12 @@ export default function Page() {
   }, [])
 
   return (
-    <main className='flex h-[90vh] max-h-[90vh] flex-col justify-between overflow-hidden p-8 md:h-screen md:max-h-screen md:p-16'>
+    <main className='relative flex h-[90vh] max-h-[90vh] flex-col justify-between overflow-hidden p-8 md:h-screen md:max-h-screen md:p-16'>
+      <div
+        style={{ backgroundImage: `url(/grain.webp)` }}
+        className='absolute inset-0 -z-10 opacity-15'
+      />
+
       <div className='flex flex-col md:flex-row md:justify-between md:gap-20 md:text-lg'>
         <div className='order-2 md:order-1'>
           <motion.h1

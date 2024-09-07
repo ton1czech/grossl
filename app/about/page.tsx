@@ -17,7 +17,12 @@ export default function Page() {
   }, [])
 
   return (
-    <main className='flex flex-col justify-between p-8 md:h-screen md:max-h-screen md:min-h-screen md:overflow-hidden md:p-16'>
+    <main className='relative flex flex-col justify-between p-8 md:h-screen md:max-h-screen md:min-h-screen md:overflow-hidden md:p-16'>
+      <div
+        style={{ backgroundImage: `url(/grain.webp)` }}
+        className='absolute inset-0 -z-10 opacity-15'
+      />
+
       <div className='grid gap-10 lg:grid-cols-[1fr_2.5fr] 2xl:grid-cols-[1fr_2.1fr]'>
         <div className='flex flex-col gap-2'>
           <motion.div
