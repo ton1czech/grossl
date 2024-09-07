@@ -19,7 +19,7 @@ export default function Page() {
     <main className='relative flex h-[90vh] max-h-[90vh] flex-col justify-between overflow-hidden p-8 md:h-screen md:max-h-screen md:p-16'>
       <div
         style={{ backgroundImage: `url(/grain.webp)` }}
-        className='absolute inset-0 -z-10 opacity-15'
+        className='absolute inset-0 -z-10 opacity-10'
       />
 
       <div className='flex flex-col md:flex-row md:justify-between md:gap-20 md:text-lg'>

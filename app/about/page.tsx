@@ -20,7 +20,7 @@ export default function Page() {
     <main className='relative flex flex-col justify-between p-8 md:h-screen md:max-h-screen md:min-h-screen md:overflow-hidden md:p-16'>
       <div
         style={{ backgroundImage: `url(/grain.webp)` }}
-        className='absolute inset-0 -z-10 opacity-15'
+        className='absolute inset-0 -z-10 opacity-10'
       />
 
       <div className='grid gap-10 lg:grid-cols-[1fr_2.5fr] 2xl:grid-cols-[1fr_2.1fr]'>
@@ -55,17 +55,23 @@ export default function Page() {
             </Link>
           </motion.div>
 
-          <motion.img
-            src='/about.webp'
-            alt='portrait'
-            // initial={{ opacity: 0, scale: 0.1 }}
-            animate={{ opacity: isHovered ? '50%' : '100%', scale: 1 }}
-            transition={{
-              // delay: isInitialRender ? 0.3 : 0,
-              // duration: isInitialRender ? 1.5 : 0.35,
-              duration: 0.35,
-            }}
-          />
+          <div className='relative'>
+            <motion.img
+              src='/about.webp'
+              alt='portrait'
+              // initial={{ opacity: 0, scale: 0.1 }}
+              animate={{ opacity: isHovered ? '50%' : '100%', scale: 1 }}
+              transition={{
+                // delay: isInitialRender ? 0.3 : 0,
+                // duration: isInitialRender ? 1.5 : 0.35,
+                duration: 0.35,
+              }}
+            />
+            <div
+              style={{ backgroundImage: `url(/grain.webp)` }}
+              className='absolute inset-0 z-10 opacity-10'
+            />
+          </div>
         </div>
 
         <div className='flex flex-col justify-between gap-8 text-justify lg:text-lg 2xl:text-xl'>
