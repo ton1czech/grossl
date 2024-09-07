@@ -33,67 +33,6 @@ export default function Page() {
             <br className='hidden md:block' />
             specializing in social media and marketing.
           </motion.h1>
-          <div className='flex flex-col text-zinc-300'>
-            <motion.div
-              // initial={{ opacity: 0, x: -10 }}
-              animate={{
-                opacity:
-                  isHovered && text !== 'dominikgrossl77@gmail.com'
-                    ? '50%'
-                    : '100%',
-                x: 0,
-              }}
-              transition={{
-                // delay: isInitialRender ? 3 : 0,
-                // duration: isInitialRender ? 0.7 : 0.35,
-                duration: 0.35,
-              }}
-              className='w-min'
-            >
-              <Link
-                href='mailto:dominikgrossl77@gmail.com'
-                onMouseEnter={(e) => {
-                  setIsHovered(true)
-                  setText(e.currentTarget.innerText)
-                }}
-                onMouseLeave={() => {
-                  setIsHovered(false)
-                  setText('')
-                }}
-              >
-                dominikgrossl77@gmail.com
-              </Link>
-            </motion.div>
-            <motion.div
-              // initial={{ opacity: 0, x: -10 }}
-              animate={{
-                opacity:
-                  isHovered && text !== '+420 739 830 034' ? '50%' : '100%',
-                x: 0,
-              }}
-              transition={{
-                // delay: isInitialRender ? 3.2 : 0,
-                // duration: isInitialRender ? 0.7 : 0.35,
-                duration: 0.35,
-              }}
-              className='w-min'
-            >
-              <Link
-                href='tel:+420739830034'
-                onMouseEnter={(e) => {
-                  setIsHovered(true)
-                  setText(e.currentTarget.innerText)
-                }}
-                onMouseLeave={() => {
-                  setIsHovered(false)
-                  setText('')
-                }}
-                className='whitespace-nowrap'
-              >
-                +420 739 830 034
-              </Link>
-            </motion.div>
-          </div>
         </div>
 
         <div className='order-1 flex flex-col text-zinc-300 md:order-2 md:text-right'>
@@ -204,7 +143,8 @@ export default function Page() {
             }}
             className='pt-5 text-center text-[8px] text-zinc-500 md:pt-10 md:text-xs'
           >
-            &copy; {new Date().getFullYear()} Dominik Grössl
+            &copy; {new Date().getFullYear()} Dominik Grössl | 345 06, Němčice
+            26, Česká republika | IČO: 14184397
           </motion.p>
         </footer>
       </div>
