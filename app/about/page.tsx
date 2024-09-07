@@ -55,23 +55,17 @@ export default function Page() {
             </Link>
           </motion.div>
 
-          <div className='relative'>
-            <motion.img
-              src='/about.webp'
-              alt='portrait'
-              // initial={{ opacity: 0, scale: 0.1 }}
-              animate={{ opacity: isHovered ? '50%' : '100%', scale: 1 }}
-              transition={{
-                // delay: isInitialRender ? 0.3 : 0,
-                // duration: isInitialRender ? 1.5 : 0.35,
-                duration: 0.35,
-              }}
-            />
-            <div
-              style={{ backgroundImage: `url(/grain.webp)` }}
-              className='absolute inset-0 z-10 opacity-10'
-            />
-          </div>
+          <motion.img
+            src='/about.webp'
+            alt='portrait'
+            // initial={{ opacity: 0, scale: 0.1 }}
+            animate={{ opacity: isHovered ? '50%' : '100%', scale: 1 }}
+            transition={{
+              // delay: isInitialRender ? 0.3 : 0,
+              // duration: isInitialRender ? 1.5 : 0.35,
+              duration: 0.35,
+            }}
+          />
         </div>
 
         <div className='flex flex-col justify-between gap-8 text-justify lg:text-lg 2xl:text-xl'>
@@ -127,8 +121,7 @@ export default function Page() {
               }}
               className='w-min'
             >
-              <Link
-                href='mailto:dominikgrossl77@gmail.com'
+              <p
                 onMouseEnter={(e) => {
                   setIsHovered(true)
                   setText(e.currentTarget.innerText)
@@ -139,7 +132,7 @@ export default function Page() {
                 }}
               >
                 dominikgrossl77@gmail.com
-              </Link>
+              </p>
             </motion.div>
             <motion.div
               // initial={{ opacity: 0, x: -10 }}
@@ -155,8 +148,7 @@ export default function Page() {
               }}
               className='w-min'
             >
-              <Link
-                href='tel:+420739830034'
+              <p
                 onMouseEnter={(e) => {
                   setIsHovered(true)
                   setText(e.currentTarget.innerText)
@@ -168,7 +160,7 @@ export default function Page() {
                 className='whitespace-nowrap'
               >
                 +420 739 830 034
-              </Link>
+              </p>
             </motion.div>
           </div>
         </div>
