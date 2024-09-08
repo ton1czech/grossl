@@ -34,93 +34,53 @@ export default function Page() {
             }}
             className='my-10 text-lg font-semibold md:mb-6 md:mt-0 md:text-2xl'
           >
-            Dominik is a business minded professional lifestyle content creator,{' '}
+            Dominik is a business-minded professional lifestyle content creator,{' '}
             <br className='hidden md:block' />
             specializing in social media and marketing.
           </motion.h1>
         </div>
 
-        <div className='order-1 flex flex-col text-zinc-300 md:order-2 md:text-right'>
-          <motion.div
-            // initial={{ opacity: 0, x: 10 }}
-            animate={{
-              opacity: isHovered && text !== 'About' ? '50%' : '100%',
-              x: 0,
-            }}
-            transition={{
-              // delay: isInitialRender ? 3 : 0,
-              // duration: isInitialRender ? 0.7 : 0.35,
-              duration: 0.35,
-            }}
+        <motion.div
+          animate={{
+            opacity: isHovered && text !== 'links' ? '50%' : '100%',
+            x: 0,
+          }}
+          transition={{
+            // delay: isInitialRender ? 3 : 0,
+            // duration: isInitialRender ? 0.7 : 0.35,
+            duration: 0.35,
+          }}
+          onMouseEnter={(e) => {
+            setIsHovered(true)
+            setText('links')
+          }}
+          onMouseLeave={() => {
+            setIsHovered(false)
+            setText('')
+          }}
+          className='order-1 flex flex-col text-zinc-300 md:order-2 md:text-right'
+        >
+          <Link
+            href='/about'
+            className='duration-[0.3s] transition hover:opacity-50'
           >
-            <Link
-              href='/about'
-              onMouseEnter={(e) => {
-                setIsHovered(true)
-                setText(e.currentTarget.innerText)
-              }}
-              onMouseLeave={() => {
-                setIsHovered(false)
-                setText('')
-              }}
-            >
-              About
-            </Link>
-          </motion.div>
-          <motion.div
-            // initial={{ opacity: 0, x: 10 }}
-            animate={{
-              opacity: isHovered && text !== 'Instagram' ? '50%' : '100%',
-              x: 0,
-            }}
-            transition={{
-              delay: isInitialRender ? 3.2 : 0,
-              duration: isInitialRender ? 0.7 : 0.35,
-            }}
+            About
+          </Link>
+          <Link
+            href='https://www.instagram.com/dominik_grossl/'
+            target='_blank'
+            className='duration-[0.3s] transition hover:opacity-50'
           >
-            <Link
-              href='https://www.instagram.com/dominik_grossl/'
-              target='_blank'
-              onMouseEnter={(e) => {
-                setIsHovered(true)
-                setText(e.currentTarget.innerText)
-              }}
-              onMouseLeave={() => {
-                setIsHovered(false)
-                setText('')
-              }}
-            >
-              Instagram
-            </Link>
-          </motion.div>
-          <motion.div
-            // initial={{ opacity: 0, x: 10 }}
-            animate={{
-              opacity: isHovered && text !== 'LinkedIn' ? '50%' : '100%',
-              x: 0,
-            }}
-            transition={{
-              // delay: isInitialRender ? 3.4 : 0,
-              // duration: isInitialRender ? 0.7 : 0.35,
-              duration: 0.35,
-            }}
+            Instagram
+          </Link>
+          <Link
+            href='https://www.linkedin.com/search/results/all/?fetchDeterministicClustersOnly=true&heroEntityKey=urn:li:fsd_profile:ACoAADRJzjMBBRG3KMTYxuBXvyVNId6aFenJhNg&keywords=dominik%20gr%C3%B6ssl&origin=RICH_QUERY_SUGGESTION&position=1&searchId=0d495397-767d-47b2-9c4d-e3d33ceb3852&sid=wai&spellCorrectionEnabled=false'
+            target='_blank'
+            className='duration-[0.3s] transition hover:opacity-50'
           >
-            <Link
-              href='https://www.linkedin.com/search/results/all/?fetchDeterministicClustersOnly=true&heroEntityKey=urn:li:fsd_profile:ACoAADRJzjMBBRG3KMTYxuBXvyVNId6aFenJhNg&keywords=dominik%20gr%C3%B6ssl&origin=RICH_QUERY_SUGGESTION&position=1&searchId=0d495397-767d-47b2-9c4d-e3d33ceb3852&sid=wai&spellCorrectionEnabled=false'
-              target='_blank'
-              onMouseEnter={(e) => {
-                setIsHovered(true)
-                setText(e.currentTarget.innerText)
-              }}
-              onMouseLeave={() => {
-                setIsHovered(false)
-                setText('')
-              }}
-            >
-              LinkedIn
-            </Link>
-          </motion.div>
-        </div>
+            LinkedIn
+          </Link>
+        </motion.div>
       </div>
 
       <div>
@@ -136,6 +96,7 @@ export default function Page() {
           }}
           className='origin-top'
         />
+        {/* <h1 className='text-[450px] font-bold'>Grössl</h1> */}
 
         <footer className='mt-10'>
           <motion.img
