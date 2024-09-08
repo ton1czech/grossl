@@ -32,11 +32,11 @@ export default function Page() {
               // duration: isInitialRender ? 0.7 : 0.35,
               duration: 0.35,
             }}
-            className='my-10 text-lg font-semibold md:mb-6 md:mt-0 md:text-2xl'
+            className='my-10 text-[16px] font-semibold md:mb-6 md:mt-0 md:text-2xl'
           >
-            Dominik is a business-minded professional lifestyle content creator,{' '}
-            <br className='hidden md:block' />
-            specializing in social media and marketing.
+            Dominik is a business-minded professional lifestyle content creator,
+            specializing in social media.{' '}
+            <span className='hidden md:block'>and marketing.</span>
           </motion.h1>
         </div>
 
@@ -74,7 +74,7 @@ export default function Page() {
             Instagram
           </Link>
           <Link
-            href='https://www.linkedin.com/search/results/all/?fetchDeterministicClustersOnly=true&heroEntityKey=urn:li:fsd_profile:ACoAADRJzjMBBRG3KMTYxuBXvyVNId6aFenJhNg&keywords=dominik%20gr%C3%B6ssl&origin=RICH_QUERY_SUGGESTION&position=1&searchId=0d495397-767d-47b2-9c4d-e3d33ceb3852&sid=wai&spellCorrectionEnabled=false'
+            href='https://www.linkedin.com/in/dominik-grössl/'
             target='_blank'
             className='duration-[0.3s] transition hover:opacity-50'
           >
