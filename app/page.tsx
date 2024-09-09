@@ -34,9 +34,17 @@ export default function Page() {
             }}
             className='my-10 text-[16px] font-semibold md:mb-6 md:mt-0 md:text-2xl'
           >
-            Dominik is a business-minded professional lifestyle content creator,
-            specializing in social media.{' '}
-            <span className='hidden md:block'>and marketing.</span>
+            <span className='hidden md:block'>
+              Dominik is a business minded professional lifestyle content
+              creator,
+              <br />
+              specializing in social media and marketing.
+            </span>
+
+            <span className='md:hidden'>
+              Dominik is a business minded professional lifestyle content
+              creator, specializing in social media.
+            </span>
           </motion.h1>
         </div>
 
