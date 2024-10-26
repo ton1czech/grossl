@@ -34,7 +34,7 @@ export default function Page() {
           // duration: isInitialRender ? 0.7 : 0.35,
           duration: 0.35,
         }}
-        className='mb-4 w-min'
+        className='mb-2 w-min'
       >
         <Link
           href='/'
@@ -54,7 +54,7 @@ export default function Page() {
       </motion.div>
 
       <div className='flex h-full flex-col justify-between'>
-        <div className='grid md:gap-10 lg:grid-cols-[1fr_2.5fr] 2xl:grid-cols-[1fr_2.1fr]'>
+        <div className='grid md:gap-10 lg:flex'>
           <div className='flex flex-col gap-2'>
             <motion.img
               src='/about.webp'
@@ -66,6 +66,7 @@ export default function Page() {
                 // duration: isInitialRender ? 1.5 : 0.35,
                 duration: 0.35,
               }}
+              className='xl:max-h-[80vh] xl:max-w-[33vw]'
             />
           </div>
 
@@ -167,7 +168,7 @@ export default function Page() {
           </div>
         </div>
 
-        <footer className='mt-10'>
+        <footer>
           <motion.img
             src='/footer.webp'
             alt='footer'
