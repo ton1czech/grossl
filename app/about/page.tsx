@@ -54,7 +54,7 @@ export default function Page() {
       </motion.div>
 
       <div className='flex h-full flex-col justify-between'>
-        <div className='grid md:gap-10 lg:flex'>
+        <div className='grid md:flex md:gap-10'>
           <div className='flex flex-col gap-2'>
             <motion.img
               src='/about.webp'
@@ -168,7 +168,7 @@ export default function Page() {
           </div>
         </div>
 
-        <footer>
+        <footer className='mt-10'>
           <motion.img
             src='/footer.webp'
             alt='footer'
