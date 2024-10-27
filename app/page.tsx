@@ -108,14 +108,27 @@ export default function Page() {
 
         <footer className='mt-10'>
           <motion.img
-            src='/footer.webp'
+            src='/footer-mobile.webp'
             alt='footer'
             animate={{ opacity: isHovered ? '50%' : '100%' }}
             transition={{
               duration: 0.35,
             }}
-            className='mx-auto w-[350px] md:w-[450px]'
+            className='mx-auto w-[220px] md:hidden'
           />
+          <motion.img
+            src='/footer-desktop.webp'
+            alt='footer'
+            animate={{ opacity: isHovered ? '50%' : '100%' }}
+            transition={{
+              duration: 0.35,
+            }}
+            className='mx-auto hidden md:block md:w-[450px]'
+          />
+          {/* <p className='pt-5 text-center text-[12.80px] text-zinc-500 md:pt-10 md:text-xs'>
+            &copy; {new Date().getFullYear()} Dominik Grössl <br />
+            345 06, Němčice 26, Česká republika <br /> IČO: 14184397
+          </p> */}
         </footer>
       </div>
     </main>

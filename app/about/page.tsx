@@ -170,13 +170,22 @@ export default function Page() {
 
         <footer className='mt-10'>
           <motion.img
-            src='/footer.webp'
+            src='/footer-mobile.webp'
             alt='footer'
             animate={{ opacity: isHovered ? '50%' : '100%' }}
             transition={{
               duration: 0.35,
             }}
-            className='mx-auto w-[350px] md:w-[450px]'
+            className='mx-auto w-[220px] md:hidden'
+          />
+          <motion.img
+            src='/footer-desktop.webp'
+            alt='footer'
+            animate={{ opacity: isHovered ? '50%' : '100%' }}
+            transition={{
+              duration: 0.35,
+            }}
+            className='mx-auto hidden md:block md:w-[450px]'
           />
         </footer>
       </div>
