@@ -114,7 +114,7 @@ export default function Page() {
             transition={{
               duration: 0.35,
             }}
-            className='mx-auto w-[220px] md:hidden'
+            className='mx-auto w-[270px] md:hidden'
           />
           <motion.img
             src='/footer-desktop.webp'
@@ -127,7 +127,7 @@ export default function Page() {
           />
           {/* <p className='pt-5 text-center text-[12.80px] text-zinc-500 md:pt-10 md:text-xs'>
             &copy; {new Date().getFullYear()} Dominik Grössl <br />
-            345 06, Němčice 26, Česká republika <br /> IČO: 14184397
+            IČO: 14184397 | 345 06, Němčice 26, Česká republika
           </p> */}
         </footer>
       </div>

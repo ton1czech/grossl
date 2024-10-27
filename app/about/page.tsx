@@ -176,7 +176,7 @@ export default function Page() {
             transition={{
               duration: 0.35,
             }}
-            className='mx-auto w-[220px] md:hidden'
+            className='mx-auto w-[270px] md:hidden'
           />
           <motion.img
             src='/footer-desktop.webp'
