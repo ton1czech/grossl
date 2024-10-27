@@ -66,7 +66,7 @@ export default function Page() {
                 // duration: isInitialRender ? 1.5 : 0.35,
                 duration: 0.35,
               }}
-              className='xl:max-h-[75vh] xl:max-w-[30vw]'
+              className='xl:max-h-[75vh] xl:max-w-[25vw]'
             />
           </div>
 
